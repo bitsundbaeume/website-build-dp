@@ -10,8 +10,8 @@ REPO=/var/www/$USER/repositories/bubweb-$BRANCH
 LOCKDIR=/var/www/$USER/website_build_lock
 LOGDIR=/var/www/$USER/website_build_log
 
-CURRENT=$WEBROOTSDIR/bubweb-$BRANCH-current
-NEW=$WEBROOTSDIR/bubweb-$BRANCH-new
+CURRENT=bubweb-$BRANCH-current
+NEW=bubweb-$BRANCH-new
 
 LOGFILE=bitbaumweb_build_$BRANCH.log
 TIMEOUT=600 # in seconds
@@ -78,7 +78,6 @@ if test -f $REPO/_site/index.html; then
 	cd $WEBROOTSDIR
 	mkdir $NEW 
 	cp -a $REPO/_site/. $NEW
-	# cp ~/.htaccess $NEW
 	ln -s $NEW $DOMAIN
 	rm -r $CURRENT
 	mv $NEW $CURRENT
