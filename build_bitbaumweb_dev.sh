@@ -78,7 +78,7 @@ if test -f $REPO/_site/index.html; then
 	cd $WEBROOTSDIR
 	mkdir $NEW 
 	cp -a $REPO/_site/. $NEW
-	cp ~/.htaccess $NEW
+	# cp ~/.htaccess $NEW
 	ln -s $NEW $DOMAIN
 	rm -r $CURRENT
 	mv $NEW $CURRENT
