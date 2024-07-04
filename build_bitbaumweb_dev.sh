@@ -81,7 +81,7 @@ if test -f $REPO/_site/index.html; then
 	ln -s $NEW $DOMAIN
 	rm -r $CURRENT
 	mv $NEW $CURRENT
-	rm $DOMAIN
+	rm $DOMAIN -r
 	ln -s $CURRENT $DOMAIN
 	
 	if test -f $DOMAIN/index.html; then
